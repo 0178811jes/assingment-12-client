@@ -3,14 +3,15 @@ import React, { useEffect, useState } from 'react';
 import BookingModal from '../BookingModal/BookingModal';
 import AppointmentOption from './AppointmentOption';
 
-const AvailableAppoinment = ({selectedDate}) => {
+const AvailableAppoinment = ({ selectedDate }) => {
     const [appointmentOptions, setAppointmentOptions] = useState([]);
+    const [product, setProduct] = useState(null);
 
     useEffect(() => {
         fetch('appointmentOptions.json')
-        .then(res => res.json())
-        .then(data=> setAppointmentOptions(data))
-    },[])
+            .then(res => res.json())
+            .then(data => setAppointmentOptions(data))
+    }, [])
     return (
         <section className='my-16'>
             <p className="text-center text-info font-bold">Available appointment on {format(selectedDate, 'PP')}</p>
@@ -19,12 +20,19 @@ const AvailableAppoinment = ({selectedDate}) => {
                     appointmentOptions.map(option => <AppointmentOption
                         key={option._id}
                         appointmentOption={option}
+                        setProduct={setProduct}
                     ></AppointmentOption>)
                 }
             </div>
-            <BookingModal></BookingModal>
+            {
+                product &&
+                <BookingModal
+                    selectedDate={selectedDate}
+                    product={product}
+                ></BookingModal>
+            }
         </section>
-        
+
     );
 };
 

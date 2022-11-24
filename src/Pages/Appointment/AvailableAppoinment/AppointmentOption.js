@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AppointmentOption = ({ appointmentOption }) => {
+const AppointmentOption = ({ appointmentOption, setProduct }) => {
     const { orginalPrice, img, resalePrice, title, date, location} = appointmentOption;
     return (
         <div className="card shadow-xl">
@@ -15,7 +15,11 @@ const AppointmentOption = ({ appointmentOption }) => {
                 <p>Location: {location}</p>
                 <div className="card-actions">
                     <button className="btn btn-primary">Buy Now</button>
-                    <label htmlFor="booking-modal" className="btn">open modal</label>
+                    <label 
+                    htmlFor="booking-modal" 
+                    className="btn"
+                    onClick={()=> setProduct(appointmentOption)}
+                    >open modal</label>
                 </div>
             </div>
         </div>
