@@ -1,4 +1,5 @@
 import Category from "../../Pages/Category/Category/Category";
+import Blog from "../../Pages/Home/Home/Blog/Blog";
 import Login from "../../Pages/Login/Login";
 import Products from "../../Pages/Products/Products/Products";
 
@@ -13,16 +14,22 @@ export const router = createBrowserRouter([
         children: [
            {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader:() => fetch('http://localhost:5000/allProducts')
            },
            
            {
                 path: '/category/:id',
-                element: <Category></Category>
+                element: <Category></Category>,
+                loader:({params}) => fetch(`http://localhost:5000/category/${params.id}`),
            },
            {
                 path: '/product/:id',
                 element: <Products></Products>
+           },
+           {
+                path: '/blog',
+                element: <Blog></Blog>
            },
 
            {
@@ -30,5 +37,6 @@ export const router = createBrowserRouter([
                 element: <Login></Login>
            },
         ]
+        
     }
 ])

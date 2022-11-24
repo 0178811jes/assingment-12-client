@@ -1,10 +1,12 @@
 import React from 'react';
+
 import LeftSide from '../SideBar/LeftSide';
 import RightSide from '../SideBar/RightSide';
 import Slider from './Slider';
 
 
 const Home = () => {
+    
     return (
         <div className="mx-5">
             <h2>This is Home Page</h2>
@@ -14,7 +16,9 @@ const Home = () => {
                     <LeftSide></LeftSide>
                 </div>
                 <div  className='col-span-2 ...'>
-                    <RightSide></RightSide>
+                    <RightSide>
+                        
+                    </RightSide>
                 </div>
             </div>
         </div>

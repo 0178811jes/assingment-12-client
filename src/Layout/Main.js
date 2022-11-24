@@ -1,5 +1,6 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
+
 import LeftSide from '../Pages/Home/SideBar/LeftSide';
 import RightSide from '../Pages/Home/SideBar/RightSide';
 
@@ -11,6 +12,7 @@ const Main = () => {
     return (
         <div>
             <Navber></Navber>
+            
             <Header></Header>
             <Outlet className=" grid grid-cols-3 gap-4">
             <div className='justify-between grid grid-cols-3 gap-4 mt-5'>
@@ -22,6 +24,7 @@ const Main = () => {
                 </div>
             </div>
             </Outlet>
+            
             <Footer></Footer>
         </div>
     );
