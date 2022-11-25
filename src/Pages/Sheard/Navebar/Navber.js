@@ -1,14 +1,27 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthConext } from '../../../context/AuthProvider';
 
 const Navber = () => {
+    const { user, logout } = useContext(AuthConext);
+
+    const handleLogout =()=> {
+        logout()
+        .then(()=> {})
+        .catch(err => console.error(err))
+    }
 
     const navMenu = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/blog'>Blog</Link></li>
         <li><Link to='/appointment'>My Product</Link></li>
-        <li><Link to='/dashboard'>Dashboard</Link></li>
-        <li><Link to='/login'>Login</Link></li>
+        
+        {user?.uid ?
+            <>
+            <li><Link to='/dashboard'>Dashboard</Link></li>
+            <li><button onClick={handleLogout}>Logout</button></li>
+            </>
+            : <li><Link to='/login'>Login</Link></li>}
     </>
 
     return (
@@ -35,7 +48,7 @@ const Navber = () => {
                         {navMenu}
                     </ul>
                 </div>
-                
+
             </div>
         </div>
     );

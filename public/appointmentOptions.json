@@ -1,6 +1,5 @@
 [
     {
-      "_id": "0282e0e58a5c404fbd15261f11c2ab6a",
       
       "category_id": "01",
       "price": "$",
@@ -14,7 +13,6 @@
 
     },
     {
-      "_id": "0282e0e58a5c404fbd15261f11c2ab6b",
       
       "category_id": "03",
       "price": "$",
@@ -29,7 +27,6 @@
     },
 
     {
-      "_id": "f69a695f037cd9484cecaea37ca71011",
       
       "category_id": "01",
       "price": "$",
@@ -43,7 +40,6 @@
 
     },
     {
-      "_id": "f69a695f037cd9484cecaea37ca71012",
      
       "category_id": "02",
       "price": "$",
@@ -58,7 +54,6 @@
     },
 
     {
-      "_id": "11468ed61aee84de492a8b04158a22f9",
       
       "category_id": "03",
       "price": "$",
@@ -72,7 +67,6 @@
 
     },
     {
-      "_id": "11468ed61aee84de492a8b04158a22f0",
       
       "category_id": "01",
       "price": "$",
@@ -87,7 +81,6 @@
     },
 
     {
-      "_id": "2e78e5e0310c2e9adbb6efb1a263e745",
       
       "category_id": "02",
       "price": "$",
@@ -102,7 +95,6 @@
     },
 
     {
-      "_id": "a713ee936ff5574273f0f769f5c5b20e",
       
       "category_id": "03",
       "price": "$",
@@ -117,7 +109,6 @@
     },
 
     {
-      "_id": "e342b6c0c8efc8ca9e811991dc8a7900",
       
       "category_id": "04",
       "price": "$",
@@ -131,7 +122,6 @@
 
     },
     {
-      "_id": "e342b6c0c8efc8ca9e811991dc8a7901",
       
       "category_id": "04",
       "price": "$",
@@ -146,7 +136,6 @@
     },
 
     {
-      "_id": "f06f8cc035b04bd1158e4198281915a3",
       
       "category_id": "05",
       "price": "$",
@@ -160,7 +149,6 @@
 
     },
     {
-      "_id": "f06f8cc035b04bd1158e4198281915a4",
       
       "category_id": "05",
       "price": "$",
@@ -175,7 +163,6 @@
     },
 
     {
-      "_id": "cd2b53655737cc4077542baea9f8f75d",
       
       "category_id": "02",
       "price": "$",
@@ -189,7 +176,6 @@
 
     },
     {
-      "_id": "4e6092d54c18fbd89ad59e88a1e87fbb",
      
       "category_id": "07",
       "price": "$",
@@ -203,7 +189,6 @@
 
     },
     {
-      "_id": "7c4dfea0fafddc813673282a428429b7",
       
       "category_id": "01",
       "price": "$",
@@ -217,7 +202,6 @@
 
     },
     {
-      "_id": "30af81e91ab3eafc0bcae0de62f55d5c",
       
       "category_id": "01",
       "price": "$",
@@ -231,7 +215,6 @@
 
     },
     {
-      "_id": "df11ff9feefc37613cc3a4486ce02151",
       
       "category_id": "02",
       "price": "$",
@@ -245,7 +228,6 @@
 
     },
     {
-      "_id": "919db97c34e0778b387dd40cdfa08130",
       
       "category_id": "01",
       "price": "$",
@@ -259,7 +241,6 @@
 
     },
     {
-      "_id": "374df11ae3d9b8b9ce21f4dc53f59b85",
       
       "category_id": "01",
       "price": "$",
@@ -274,7 +255,6 @@
       
     },
     {
-      "_id": "acb9b6785b62698fc6130db7615965e1",
       
       "category_id": "03",
       "price": "$",
@@ -288,7 +268,6 @@
 
     },
     {
-      "_id": "be44c843d61859cc0b87cae85c55f9db",
      
       "category_id": "01",
       "price": "$",
@@ -303,7 +282,6 @@
       
     },
     {
-      "_id": "1b03149c50f1bec662062d930bf46489",
      
       "category_id": "02",
       "price": "$",
@@ -318,7 +296,6 @@
       
     },
     {
-      "_id": "7f5b80c1cdd4df0111918883eae07349",
       
       "category_id": "03",
       "price": "$",
@@ -333,7 +310,6 @@
      
     },
     {
-      "_id": "17d266b79d2fcd850cd4d983c3aeb95f",
      
       "category_id": "07",
       "price": "$",
@@ -348,7 +324,6 @@
       
     },
     {
-      "_id": "61f9ce168f7b15aadecb1d1fc80c72f0",
       
       "category_id": "05",
       "price": "$",
@@ -363,7 +338,6 @@
       
     },
     {
-      "_id": "61f9ce168f7b15aadecb1d1fc80c72f7",
       "category_id": "04",
       "price": "$",
       "img": "https://i.ibb.co/WK1GwLm/pic-1.webp",

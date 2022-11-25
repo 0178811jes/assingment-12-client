@@ -1,12 +1,34 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
+import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom';
+import { AuthConext } from '../../context/AuthProvider';
 
 const Signup = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
+    const { createUser, updateUser } = useContext(AuthConext);
+    const [signupError, setSignupError] = useState('')
+
 
     const handleLogin = data => {
         console.log(data);
+        setSignupError('');
+        createUser(data.email, data.password)
+            .then(result => {
+                const user = result.user;
+                console.log(user);
+                toast('User created successfully')
+                const userInfo={
+                    displayName: data.name
+                }
+                updateUser(userInfo)
+                .then(() => {})
+                .catch(err => console.log(err));
+            })
+            .catch(err => {
+                console.error(err)
+                setSignupError(err.message)
+            })
     }
 
     return (
@@ -14,7 +36,15 @@ const Signup = () => {
             <div className="w-96 p-7">
                 <h2 className="text-xl text-center">Signup</h2>
                 <form onSubmit={handleSubmit(handleLogin)}>
-                    
+                    <div className="form-control w-full max-w-xs">
+                        <label className="label"><span className="label-text-alt">Name</span></label>
+
+                        <input {...register("name",
+                        )} type='text'
+                            className="input input-bordered w-full max-w-xs" />
+
+                    </div>
+
                     <div className="form-control w-full max-w-xs">
                         <label className="label"><span className="label-text-alt">Email</span></label>
 
@@ -26,7 +56,7 @@ const Signup = () => {
                     <select className="input input-bordered w-full max-w-xs mt-5"
                         {...register("gender",
                             { required: 'gender is required' })} type='text'>
-                         <option disabled selected>Select one</option>
+                        <option disabled selected>Select one</option>
                         <option value="admine">Admine</option>
                         <option value="user">User</option>
                         {errors.gender && <p className='text-red-600'>{errors.gender?.message}</p>}
@@ -41,7 +71,10 @@ const Signup = () => {
                         <label className="label"><span className="label-text-alt">Forget Password ?</span></label>
                     </div>
 
-                    <input type="submit" value='Signup' className="btn btn-accent mt-5 input input-bordered w-full max-w-xs" />
+                        <input type="submit" value='Signup' className="btn btn-accent mt-5 input input-bordered w-full max-w-xs" />
+                        {
+                            signupError && <p className="text-red-600">{signupError}</p>
+                        }
                 </form>
                 <p className='mt-3'>Already have an account ? <Link className="text-secondary" to='/login'>Please Login</Link></p>
                 <div className="divider">OR</div>

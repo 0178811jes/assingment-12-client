@@ -1,9 +1,11 @@
 import Appointment from "../../Pages/Appointment/Appointment/Appointment";
 import Category from "../../Pages/Category/Category/Category";
+import Dashboard from "../../Pages/Dashboard/Dashboard/Dashboard";
 import Blog from "../../Pages/Home/Home/Blog/Blog";
 import Login from "../../Pages/Login/Login";
 import Products from "../../Pages/Products/Products/Products";
 import Signup from "../../Pages/Signup/Signup";
+import PrivetRoute from "../PrivateRoute/PrivetRoute";
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../../Layout/Main");
@@ -48,5 +50,9 @@ export const router = createBrowserRouter([
            }
         ]
         
+    },
+    {
+     path:'/dashboard',
+     element: <PrivetRoute><Dashboard></Dashboard></PrivetRoute>
     }
 ])
