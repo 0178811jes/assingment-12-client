@@ -14,12 +14,13 @@ const AppointmentOption = ({ appointmentOption, setProduct }) => {
                 <p>Date: {date}</p>
                 <p>Location: {location}</p>
                 <div className="card-actions">
-                    <button className="btn btn-primary">Buy Now</button>
+                    
                     <label 
+                    disabled={title.length === 0}
                     htmlFor="booking-modal" 
-                    className="btn"
+                    className="btn btn-primary"
                     onClick={()=> setProduct(appointmentOption)}
-                    >open modal</label>
+                    >Buy Now</label>
                 </div>
             </div>
         </div>
