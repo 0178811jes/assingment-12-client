@@ -3,6 +3,7 @@ import Category from "../../Pages/Category/Category/Category";
 import Blog from "../../Pages/Home/Home/Blog/Blog";
 import Login from "../../Pages/Login/Login";
 import Products from "../../Pages/Products/Products/Products";
+import Signup from "../../Pages/Signup/Signup";
 
 const { createBrowserRouter } = require("react-router-dom");
 const { default: Main } = require("../../Layout/Main");
@@ -36,6 +37,10 @@ export const router = createBrowserRouter([
            {
                 path: '/login',
                 element: <Login></Login>
+           },
+           {
+                path: '/signup',
+                element: <Signup></Signup>
            },
            {
             path:'/appointment',
