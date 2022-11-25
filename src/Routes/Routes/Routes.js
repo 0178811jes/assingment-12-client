@@ -1,3 +1,4 @@
+import DashboardLayout from "../../Layout/DashboardLayout";
 import Appointment from "../../Pages/Appointment/Appointment/Appointment";
 import Category from "../../Pages/Category/Category/Category";
 import Dashboard from "../../Pages/Dashboard/Dashboard/Dashboard";
@@ -53,6 +54,12 @@ export const router = createBrowserRouter([
     },
     {
      path:'/dashboard',
-     element: <PrivetRoute><Dashboard></Dashboard></PrivetRoute>
+     element: <PrivetRoute><DashboardLayout></DashboardLayout></PrivetRoute>,
+     children: [
+          {
+               path:'/dashboard',
+               element:<Dashboard></Dashboard>
+          }
+     ]
     }
 ])

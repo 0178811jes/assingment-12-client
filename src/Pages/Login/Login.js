@@ -67,7 +67,8 @@ const Login = () => {
                             { required: "Location is requird" })} type='text'
                             className="input input-bordered w-full max-w-xs" />
                         {errors.location && <p className='text-red-600'>{errors.location?.message}</p>}
-                    </div><div className="form-control w-full max-w-xs">
+                    </div>
+                    <div className="form-control w-full max-w-xs">
                         <label className="label"><span className="label-text-alt">Phone</span></label>
 
                         <input {...register("phone",
