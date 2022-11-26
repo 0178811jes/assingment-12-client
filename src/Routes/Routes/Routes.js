@@ -8,6 +8,7 @@ import Blog from "../../Pages/Home/Home/Blog/Blog";
 import Login from "../../Pages/Login/Login";
 import Products from "../../Pages/Products/Products/Products";
 import Signup from "../../Pages/Signup/Signup";
+import AdminRoute from "../AdminRout/AdminRout";
 import PrivetRoute from "../PrivateRoute/PrivetRoute";
 
 const { createBrowserRouter } = require("react-router-dom");
@@ -64,7 +65,7 @@ export const router = createBrowserRouter([
           },
           {
                path:'/dashboard/allusers',
-               element:<AllUsers></AllUsers>
+               element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
           }
      ]
     }
