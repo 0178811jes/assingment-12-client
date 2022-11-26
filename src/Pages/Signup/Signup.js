@@ -23,7 +23,7 @@ const Signup = () => {
                 }
                 updateUser(userInfo)
                     .then(() => {
-                        navigate('/');
+                        saveUser(data.name, data.email);
                     })
                     .catch(err => console.log(err));
             })
@@ -31,6 +31,22 @@ const Signup = () => {
                 console.error(err)
                 setSignupError(err.message)
             })
+    }
+
+    const saveUser =( name, email) => {
+        const user = {name, email};
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(user),
+        })
+        .then(res=>res.json())
+        .then(data=> {
+            console.log('saveUser',data)
+            navigate('/');
+        })
     }
 
     return (
@@ -59,8 +75,8 @@ const Signup = () => {
                         {...register("gender",
                             { required: 'gender is required' })} type='text'>
                         <option disabled selected>Select one</option>
-                        <option value="admine">Admine</option>
-                        <option value="user">User</option>
+                        <option value="buyer">Buyer</option>
+                        <option value="seller">Seller</option>
                         {errors.gender && <p className='text-red-600'>{errors.gender?.message}</p>}
                     </select>
                     <div className="form-control w-full max-w-xs">
@@ -72,22 +88,7 @@ const Signup = () => {
                         {errors.password && <p className='text-red-600'>{errors.password?.message}</p>}
                         <label className="label"><span className="label-text-alt">Forget Password ?</span></label>
                     </div>
-                    <div className="form-control w-full max-w-xs">
-                        <label className="label"><span className="label-text-alt">Location</span></label>
-
-                        <input {...register("location",
-                            { required: "Location is requird" })} type='text'
-                            className="input input-bordered w-full max-w-xs" />
-                        {errors.location && <p className='text-red-600'>{errors.location?.message}</p>}
-                    </div>
-                    <div className="form-control w-full max-w-xs">
-                        <label className="label"><span className="label-text-alt">Phone</span></label>
-
-                        <input {...register("phone",
-                            { required: "phone is requird" })} type='text'
-                            className="input input-bordered w-full max-w-xs" />
-                        {errors.phone && <p className='text-red-600'>{errors.phone?.message}</p>}
-                    </div>
+                    
 
 
                     <input type="submit" value='Signup' className="btn btn-accent mt-5 input input-bordered w-full max-w-xs" />

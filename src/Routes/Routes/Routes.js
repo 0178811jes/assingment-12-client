@@ -1,7 +1,9 @@
 import DashboardLayout from "../../Layout/DashboardLayout";
 import Appointment from "../../Pages/Appointment/Appointment/Appointment";
 import Category from "../../Pages/Category/Category/Category";
-import Dashboard from "../../Pages/Dashboard/Dashboard/Dashboard";
+import AllUsers from "../../Pages/Dashboard/AllUsers/AllUsers";
+
+import MyAppointProduct from "../../Pages/Dashboard/MyAppointProduct/MyAppointProduct";
 import Blog from "../../Pages/Home/Home/Blog/Blog";
 import Login from "../../Pages/Login/Login";
 import Products from "../../Pages/Products/Products/Products";
@@ -58,7 +60,11 @@ export const router = createBrowserRouter([
      children: [
           {
                path:'/dashboard',
-               element:<Dashboard></Dashboard>
+               element:<MyAppointProduct></MyAppointProduct>
+          },
+          {
+               path:'/dashboard/allusers',
+               element:<AllUsers></AllUsers>
           }
      ]
     }

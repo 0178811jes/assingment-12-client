@@ -7,7 +7,7 @@ import { AuthConext } from '../../context/AuthProvider';
 const Login = () => {
 
     const { register, formState: { errors }, handleSubmit } = useForm();
-    const {signIn}= useContext(AuthConext);
+    const {signIn, googleLogin}= useContext(AuthConext);
     const [loginError, setLoginError] = useState('')
     const location = useLocation();
     const navigate = useNavigate();
@@ -28,6 +28,17 @@ const Login = () => {
             setLoginError(err.message)
         })
     }
+
+
+    const handleGoogleLogin = () => {
+        googleLogin()
+        .then(result => {
+            const user = result.user;
+            console.log(user);
+        })
+        .catch(e => console.error(e));
+    }
+
 
     return (
         <div className="h-[800px] flex justify-center items-center">
@@ -60,22 +71,7 @@ const Login = () => {
                         <label className="label"><span className="label-text-alt">Forget Password ?</span></label>
                     </div>
                     
-                    <div className="form-control w-full max-w-xs">
-                        <label className="label"><span className="label-text-alt">Location</span></label>
-
-                        <input {...register("location",
-                            { required: "Location is requird" })} type='text'
-                            className="input input-bordered w-full max-w-xs" />
-                        {errors.location && <p className='text-red-600'>{errors.location?.message}</p>}
-                    </div>
-                    <div className="form-control w-full max-w-xs">
-                        <label className="label"><span className="label-text-alt">Phone</span></label>
-
-                        <input {...register("phone",
-                            { required: "phone is requird" })} type='text'
-                            className="input input-bordered w-full max-w-xs" />
-                        {errors.phone && <p className='text-red-600'>{errors.phone?.message}</p>}
-                    </div>
+                    
 
                     <input type="submit" value='Login' className="btn btn-accent mt-5 input input-bordered w-full max-w-xs" />
                     <div>
@@ -84,7 +80,7 @@ const Login = () => {
                 </form>
                 <p className='mt-3'>New to Waching TV ? <Link className="text-secondary" to='/signup'>Create New Account?</Link></p>
                 <div className="divider">OR</div>
-                <button className="btn btn-outline w-full">CONTINUE WITH GOOGLE</button>
+                <button onClick={handleGoogleLogin} className="btn btn-outline w-full">CONTINUE WITH GOOGLE</button>
             </div>
         </div>
     );

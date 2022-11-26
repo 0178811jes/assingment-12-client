@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AppointmentOption = ({ appointmentOption, setProduct }) => {
     const { orginalPrice, img, resalePrice, title, date, location} = appointmentOption;
@@ -22,6 +23,16 @@ const AppointmentOption = ({ appointmentOption, setProduct }) => {
                     onClick={()=> setProduct(appointmentOption)}
                     >Buy Now</label>
                 </div>
+                <Link to='/advertise'><button>Advertise</button></Link>
+                {/* <div className="card-actions">
+                    
+                    <label 
+                    disabled={title.length === 0}
+                    htmlFor="booking-modal" 
+                    className="btn btn-primary"
+                    onClick={()=> setProduct(appointmentOption)}
+                    >Advertise</label>
+                </div> */}
             </div>
         </div>
     );
