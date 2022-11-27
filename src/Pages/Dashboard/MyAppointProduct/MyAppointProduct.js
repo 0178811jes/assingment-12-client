@@ -37,7 +37,8 @@ const MyAppointProduct = () => {
                     <tbody>
                 
                         {
-                            bookings.map((booking, i) => <tr key={booking._id}>
+                            bookings &&
+                            bookings?.map((booking, i) => <tr key={booking._id}>
                             <th>{i+1}</th>
                             <td>{booking.productName}</td>
                             <td>{booking.bookingDate}</td>

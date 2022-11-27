@@ -1,7 +1,9 @@
 import DashboardLayout from "../../Layout/DashboardLayout";
 import Appointment from "../../Pages/Appointment/Appointment/Appointment";
 import Category from "../../Pages/Category/Category/Category";
+import AdminAddProduct from "../../Pages/Dashboard/AdminAddProduct/AdminAddProduct";
 import AllUsers from "../../Pages/Dashboard/AllUsers/AllUsers";
+import ManageProduct from "../../Pages/Dashboard/MannageProduct/ManageProduct";
 
 import MyAppointProduct from "../../Pages/Dashboard/MyAppointProduct/MyAppointProduct";
 import Blog from "../../Pages/Home/Home/Blog/Blog";
@@ -23,7 +25,7 @@ export const router = createBrowserRouter([
            {
                 path: '/',
                 element: <Home></Home>,
-                loader:() => fetch('http://localhost:5000/allProducts')
+                
            },
            
            {
@@ -66,7 +68,15 @@ export const router = createBrowserRouter([
           {
                path:'/dashboard/allusers',
                element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
-          }
+          },
+          {
+               path:'/dashboard/adminaddproduct',
+               element: <AdminRoute><AdminAddProduct></AdminAddProduct></AdminRoute>
+          },
+          {
+               path:'/dashboard/manageproduct',
+               element: <AdminRoute><ManageProduct></ManageProduct></AdminRoute>
+          },
      ]
     }
 ])
