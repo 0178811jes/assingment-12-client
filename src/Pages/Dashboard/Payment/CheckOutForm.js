@@ -10,7 +10,7 @@ const CheckOutFrom = ({ booking }) => {
 
     const stripe = useStripe();
     const elements = useElements();
-    const { price, email, productName } = booking;
+    const { price, email, productName, _id } = booking;
 
     useEffect(() => {
         // Create PaymentIntent as soon as the page loads
@@ -63,13 +63,39 @@ const CheckOutFrom = ({ booking }) => {
                 },
             },
         );
-        if(confirmError){
-            setCardError(confirmError.message); 
-            return;     
+        if (confirmError) {
+            setCardError(confirmError.message);
+            return;
         }
-        if(paymentIntent.status === 'succeeded'){
+        if (paymentIntent.status === 'succeeded') {
             setSuccess('Your payment successfully');
             setTransactionId(paymentIntent.id);
+
+
+            const payment={
+                price,
+                transactionId:paymentIntent.id,
+                email,
+                bookingId:_id
+            }
+
+            fetch('http://localhost:5000/payments', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    authorization: `bearer ${localStorage.getItem('accessToken')}`
+                },
+                body:JSON.stringify(payment)
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if(data.insertedId) {
+                   
+                    setSuccess('Your payment successfully');
+                    setTransactionId(paymentIntent.id);
+                }
+            })
             
         }
         setProcecing(false);
@@ -107,7 +133,7 @@ const CheckOutFrom = ({ booking }) => {
                 success && <div>
                     <p className="text-green-500">{success}</p>
                     <p>Your transactionId: <span className="font-bold">{transactionId}</span></p>
-                </div> 
+                </div>
             }
         </>
     );
