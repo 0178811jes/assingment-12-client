@@ -11,7 +11,7 @@ const ManageProduct = () => {
     }
 
     const productDelet = product => {
-        fetch(`http://localhost:5000/products/${product._id}`, {
+        fetch(`https://assignment-12-server-livid.vercel.app/products/${product._id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `bearer ${localStorage.getItem('accessToken')}`
@@ -32,7 +32,7 @@ const ManageProduct = () => {
         queryKey: ['products'],
         queryFn: async () => {
             try {
-                const res = await fetch('http://localhost:5000/products', {
+                const res = await fetch('https://assignment-12-server-livid.vercel.app/products', {
                     headers: {
                         authorization: `bearer ${localStorage.getItem('accessToken')}`
                     }

@@ -34,7 +34,7 @@ export const router = createBrowserRouter([
            {
                 path: '/category/:id',
                 element: <Category></Category>,
-                loader:({params}) => fetch(`http://localhost:5000/category/${params.id}`),
+                loader:({params}) => fetch(`https://assignment-12-server-livid.vercel.app/category/${params.id}`),
            },
            {
                 path: '/product/:id',
@@ -83,8 +83,8 @@ export const router = createBrowserRouter([
           },
           {
                path:'/dashboard/payment/:id',
-               element: <AdminRoute><Payment></Payment></AdminRoute>,
-               loader:({params})=> fetch(`http://localhost:5000/bookings/${params.id}`)
+               element: <Payment></Payment>,
+               loader:({params})=> fetch(`https://assignment-12-server-livid.vercel.app/bookings/${params.id}`)
           },
      ]
     }

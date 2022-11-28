@@ -12,7 +12,7 @@ const AvailableAppoinment = ({ selectedDate }) => {
 
     const {data:appointmentOptions=[]} = useQuery({
         queryKey: ['appointmentOptions', date],
-        queryFn: ()=> fetch(`http://localhost:5000/appointmentOptions?date=${date}`)
+        queryFn: ()=> fetch(`https://assignment-12-server-livid.vercel.app/appointmentOptions?date=${date}`)
         .then(res => res.json())
     })
 

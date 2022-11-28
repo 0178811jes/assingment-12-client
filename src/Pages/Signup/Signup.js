@@ -43,7 +43,7 @@ const Signup = () => {
 
     const saveUser =( name, email) => {
         const user = {name, email};
-        fetch('http://localhost:5000/users', {
+        fetch('https://assignment-12-server-livid.vercel.app/users', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',

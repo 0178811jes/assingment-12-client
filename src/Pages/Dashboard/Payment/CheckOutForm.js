@@ -14,7 +14,7 @@ const CheckOutFrom = ({ booking }) => {
 
     useEffect(() => {
         // Create PaymentIntent as soon as the page loads
-        fetch("http://localhost:5000/create-payment-intent", {
+        fetch("https://assignment-12-server-livid.vercel.app/create-payment-intent", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -79,7 +79,7 @@ const CheckOutFrom = ({ booking }) => {
                 bookingId:_id
             }
 
-            fetch('http://localhost:5000/payments', {
+            fetch('https://assignment-12-server-livid.vercel.app/payments', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

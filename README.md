@@ -1,70 +1,26 @@
-# Getting Started with Create React App
+# RESALE WACHING TV
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Client side ripo:https://github.com/programming-hero-web-course-4/b612-used-products-resale-clients-side-0178811jes
 
-## Available Scripts
+### server side ripo: https://github.com/programming-hero-web-course-4/b612-used-products-resale-server-side-0178811jes
 
-In the project directory, you can run:
+### firebase deploy link : https://assignment-12-28868.web.app
 
-### `npm start`
+## vercel deploy link : https://assignment-12-server-livid.vercel.app/
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Description:
+### To visit the client side: Click here. https://assignment-12-28868.web.app
+or,
 
-### `npm test`
+### To visit the server side : Click here.https://assignment-12-server-livid.vercel.app
+### Here is technology:
+## 1.REACT 2. NODEjs 3.tailwind css 4.daisyui 5.firebase 6.vercel etc
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### 5 bullet points of this website
+### Here is the Home page first, on the Home page there are some of my service
+### Click the Blog page here, there are 4 questions and ans on this page
+### Here you can login and sign in and have private routes and admin route.
+### User's review can be seen here on my appoint page
+### There is 1 option in social login
+### Here is the page admin manage option and All users option

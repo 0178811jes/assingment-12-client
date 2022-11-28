@@ -14,7 +14,7 @@ const AdminAddProduct = () => {
     const {data:specialties, isLoading} = useQuery({
         queryKey: ['specialty'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/appointmentSpecialty');
+            const res = await fetch('https://assignment-12-server-livid.vercel.app/appointmentSpecialty');
             const data = await res.json();
             return data;
         }
@@ -40,7 +40,7 @@ const AdminAddProduct = () => {
                     image: imgData.data.url,
                 }
 
-                fetch('http://localhost:5000/products', {
+                fetch('https://assignment-12-server-livid.vercel.app/products', {
                     method:'POST',
                     headers: {
                         'content-type': 'application/json',

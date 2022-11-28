@@ -5,7 +5,7 @@ import { AuthConext } from '../../../context/AuthProvider';
 
 const MyAppointProduct = () => {
     const {user}= useContext(AuthConext);
-    const url = `http://localhost:5000/bookings?email=${user?.email}`;
+    const url = `https://assignment-12-server-livid.vercel.app/bookings?email=${user?.email}`;
 
     const {data:bookings = []}=useQuery({
         queryKey:['bookings', user?.email],
