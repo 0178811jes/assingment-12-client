@@ -9,6 +9,12 @@
 ## vercel deploy link : https://assignment-12-server-livid.vercel.app/
 
 
+#### admin name:emaj
+#### admin email: ema@john.com
+#### admin pass: 123456
+
+
+
 ## Description:
 ### To visit the client side: Click here. https://assignment-12-28868.web.app
 or,
