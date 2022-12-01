@@ -1,24 +1,40 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from "react";
+import RightSide from "./RightSide";
+
+
 
 const LeftSide = () => {
-    
-    const [categories, setCategories] = useState([]);
 
-    useEffect(() => {
-        fetch('https://assignment-12-server-livid.vercel.app/product-categories')
-        .then(res => res.json())
-        .then(data => setCategories(data))
-    },[])
+    const [category, setCategory] = useState([]);
+
+    const handleCategory = id => {
+        fetch(`http://localhost:5000/category/${id}`
+
+
+        )
+            .then(res => res.json())
+            .then(data => setCategory(data))
+
+    }
+
     return (
-        <div className='mt-5 mb-5 text-2xl'>
-            <h2>All Category:{categories.length}</h2>
+        <div className="grid gap-20 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <div className='mt-5 mb-5 text-2xl'>
+                <button onClick={() => handleCategory('Walton')}>Walton</button>
+                <br />
+                <button onClick={() => handleCategory('LG')}>LG</button>
+                <br />
+                <button onClick={() => handleCategory('Marcel')}>Marcel</button>
+                <br />
+                <button onClick={() => handleCategory('Vision')}>Vision</button>
+            </div>
             <div>
                 {
-                    categories.map(category=> <p key={category._id}>
-                        <Link to={`/category/${category._id}`}>{category.name}</Link>
+                    category.map(category => <RightSide key={category._id}
+                        category={category}
+                    >
 
-                    </p>)
+                    </RightSide>)
                 }
             </div>
         </div>

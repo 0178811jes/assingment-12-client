@@ -1,7 +1,7 @@
 [
     {
       
-      "category_id": "01",
+      "category_id": "Walton",
       "price": "$",
       "img": "https://i.ibb.co/jk1z5pC/pic5.jpg",
       "orginalPrice":"22000",
@@ -55,7 +55,7 @@
 
     {
       
-      "category_id": "03",
+      "category_id": "Marcel",
       "price": "$",
       "img": "https://i.ibb.co/r0pTbg1/pic-3.jpg",
       "orginalPrice":"15000",
