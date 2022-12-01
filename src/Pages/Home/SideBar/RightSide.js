@@ -12,10 +12,10 @@ const RightSide = ({category}) => {
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title">{category?.title}</h2>
-                     <p>{category?.orginalPrice}</p>              
-                     <p>{category?.resalePrice}</p>              
-                     <p>{category?.date}</p>              
-                     <p>{category?.location}</p>              
+                     <p>Orginal Price:${category?.orginalPrice}</p>              
+                     <p>Resale Price:${category?.resalePrice}</p>              
+                     <p>Date:{category?.date}</p>              
+                     <p>Location:{category?.location}</p>              
                                    
                 </div>
             </div>

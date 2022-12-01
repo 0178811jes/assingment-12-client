@@ -8,10 +8,7 @@ const LeftSide = () => {
     const [category, setCategory] = useState([]);
 
     const handleCategory = id => {
-        fetch(`http://localhost:5000/category/${id}`
-
-
-        )
+        fetch(`https://assignment-12-server-livid.vercel.app/category/${id}`)
             .then(res => res.json())
             .then(data => setCategory(data))
 
